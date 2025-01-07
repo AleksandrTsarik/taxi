@@ -1,0 +1,86 @@
+@use "./_variables";
+@use "./_fonts";
+@use "./button";
+
+[class*="__container"] {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+body {
+  font-weight: 400;
+  font-size: 16px;
+  min-width: 300px;
+  height: 100%;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  background-color: #eeeeee;
+  font-family: var(--ff);
+  &.is-open {
+    overflow: hidden;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+img {
+  vertical-align: top;
+  user-select: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+.section {
+  padding: 64px 0;
+  @media (max-width: 575px) {
+    padding: 32px auto;
+  }
+  &:first-child {
+    padding-top: 24px;
+    @media (max-width: 575px) {
+      padding-top: 15px;
+    }
+  }
+  &:last-child {
+    padding-bottom: 24px;
+    @media (max-width: 575px) {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+h2.title {
+  font-size: 44px;
+  line-height: 1;
+  font-weight: 500;
+  margin-bottom: 40px;
+  letter-spacing: -2%;
+  @media (max-width: 767px) {
+    font-size: 32px;
+  }
+  @media (max-width: 575px) {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+}
