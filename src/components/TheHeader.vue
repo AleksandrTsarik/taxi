@@ -4,7 +4,7 @@
       <div class="header__inner">
         <div class="header-top">
           <div class="header-top__item">
-            <a href="/">
+            <a href="/" class="header__logo">
               <img src="../assets/img/logo.svg" alt="logo" />
             </a>
           </div>
@@ -115,6 +115,14 @@ export default {
 </script>
 <style lang="scss">
 .header {
+  &__logo {
+    img {
+      @media(max-width: 575px) {
+      max-width: 70%;
+    }
+    }
+    
+  }
 }
 .header-top {
   padding-top: 24px;
@@ -304,11 +312,11 @@ export default {
     }
     &:first-child {
       font-size: 16px;
-      color: rgba(var(--color-text), 0.5);
+      color: rgba(var(--color_text), 0.5);
       transition: 0.3s;
       &:hover {
         @media (min-width: 1023px) {
-          color: rgba(var(--color-text), 1);
+          color: rgba(var(--color_text), 1);
         }
       }
     }

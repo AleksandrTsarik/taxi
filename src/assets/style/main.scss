@@ -18,7 +18,7 @@ body {
   padding: 0;
   background-color: #eeeeee;
   font-family: var(--ff);
-  &.is-open {
+  &.menu-open {
     overflow: hidden;
   }
 }
