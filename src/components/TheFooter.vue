@@ -22,9 +22,9 @@
           </div>
         </div>
         <div class="footer-strip">
-          <div>ООО “КОДСЕВЕН”</div>
-          <div>Политика конфиденциальности</div>
-          <div>Условия использования</div>
+          <a href="#" target="_blank">ООО “КОДСЕВЕН”</a>
+          <a href="#" target="_blank">Политика конфиденциальности</a>
+          <a href="#" target="_blank">Условия использования</a>
           <div class="footer-strip__links">
             <a href="mailto:info@codeseven.ru">info@codeseven.ru</a>
             <a href="tel:+79090058855">+7 (909) 005-88-55</a>
@@ -39,6 +39,7 @@ export default {};
 </script>
 <style lang="scss">
 .footer {
+  margin-top: 64px;
 }
 .footer-white {
   background-color: var(--light);
@@ -49,27 +50,26 @@ export default {};
   justify-content: space-between;
   gap: 20px;
   margin-bottom: 24px;
-  @media(max-width: 1023px) {
+  @media (max-width: 1023px) {
     flex-direction: column;
     align-items: flex-start;
   }
-  @media(max-width: 767px) {
-    padding: 
-    24px;
+  @media (max-width: 767px) {
+    padding: 24px;
   }
   &__logo {
     position: relative;
-    @media(max-width: 1023px) {
+    @media (max-width: 1023px) {
       width: 100%;
     }
     img {
-      @media(max-width: 767px) {
+      @media (max-width: 767px) {
         max-width: 70%;
       }
     }
     &::after {
-      content: "";
-      background-image: url("../assets/img/cursor.webp");
+      content: '';
+      background-image: url('../assets/img/cursor.webp');
       background-repeat: no-repeat;
       background-position: 50% 50%;
       background-size: contain;
@@ -80,10 +80,10 @@ export default {};
       right: -150px;
       top: -135px;
       z-index: 0;
-      @media(max-width: 1023px) {
+      @media (max-width: 1023px) {
         right: 0;
       }
-      @media(max-width: 575px) {
+      @media (max-width: 575px) {
         right: -20px;
         top: -50px;
         width: 100px;
@@ -99,27 +99,27 @@ export default {};
     gap: 24px;
     position: relative;
     z-index: 1;
- 
+
     p {
       grid-area: a;
     }
     a {
       grid-area: b;
-      @media(max-width: 575px) {
+      @media (max-width: 575px) {
         width: 100%;
         text-align: center;
       }
     }
-    @media(max-width: 1023px) {
+    @media (max-width: 1023px) {
       justify-content: space-between;
       width: 100%;
     }
-    @media(max-width: 767px) {
+    @media (max-width: 767px) {
       grid-template-areas: 'a a' 'b c';
       justify-content: start;
-    } 
-    @media(max-width: 575px) {
-      grid-template-areas: 'a' 'b''c';
+    }
+    @media (max-width: 575px) {
+      grid-template-areas: 'a' 'b' 'c';
       width: 100%;
     }
   }
@@ -152,14 +152,20 @@ export default {};
   justify-content: space-between;
   padding: 25px 0;
   white-space: nowrap;
-  @media(max-width: 575px) {
+  @media (max-width: 575px) {
     flex-direction: column;
     align-items: flex-start;
   }
-  div {
+  a {
     font-size: 14px;
     font-weight: 400;
     color: rgba(var(--color_text), 0.5);
+    transition: 0.3;
+    &:hover {
+      @media (min-width: 1023px) {
+        color: var(--orange);
+      }
+    }
   }
   &__links {
     display: flex;

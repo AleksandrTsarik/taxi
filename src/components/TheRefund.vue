@@ -106,7 +106,7 @@ export default {
       position: absolute;
       display: block;
       border: dashed 1px rgb(var(--primary));
-      height: 70%;
+      height: calc(100% - 25px);
       left: 22px;
       top: 45px;
       z-index: 0;

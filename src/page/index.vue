@@ -17,7 +17,9 @@
   <section class="section">
     <Zetta />
   </section>
-  <section class="section"></section>
+  <section class="section">
+    <Service />
+  </section>
 </template>
 <script>
 import Banner from '@/components/TheBanner.vue';
@@ -26,6 +28,7 @@ import Taxi from '@/components/TheTaxi.vue';
 import Payments from '@/components/ThePayments.vue';
 import Refund from '@/components/TheRefund.vue';
 import Zetta from '@/components/TheZetta.vue';
+import Service from '@/components/TheService.vue';
 export default {
   components: {
     Banner,
@@ -34,6 +37,7 @@ export default {
     Payments,
     Refund,
     Zetta,
+    Service,
   },
 };
 </script>
